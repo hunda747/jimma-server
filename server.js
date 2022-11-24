@@ -11,6 +11,7 @@ const restaurantRoutes = require("./routes/restaurant");
 const orderRoutes = require("./routes/order");
 const orderDetailRoutes = require("./routes/orderDetail");
 const adminRoutes = require("./routes/admin");
+const logger = require("./logger");
 
 // const associations = require("./model/associations");
 
@@ -22,8 +23,8 @@ app.use(cors());
 // app.use(associations);
 
 db.authenticate()
-  .then(() => console.log("Database connect ..."))
-  .catch((err) => console.log("Error: " + err));
+  .then(() => logger.log("info", "Database connect ..."))
+  .catch((err) => logger.log("error", "Error: " + err));
 
 app.get("/", (req, res) => res.send("indeEX"));
 app.use("/api/food", foodRoutes);
@@ -35,4 +36,4 @@ app.use("/api/admin", adminRoutes);
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, console.log(`server started on port ${PORT}`));
+app.listen(PORT, logger.log("info", `server started on port ${PORT}`));
