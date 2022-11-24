@@ -1,0 +1,1 @@
+{"level":"error","message":"Error: SequelizeConnectionRefusedError: connect ECONNREFUSED ::1:3306","service":"user-service"}

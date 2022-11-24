@@ -1,7 +1,7 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const bodyParser = require("body-parser");
-const path = require("path");
+// const path = require("path");
 const cors = require("cors");
 const db = require("./config/dbConn");
 
