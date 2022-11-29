@@ -1,4 +1,4 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/etmilestonecom/public_html/
+    - export DEPLOYPATH=/home/tolodeliveryjimm/public_html/
     - /bin/cp -R * $DEPLOYPATH
