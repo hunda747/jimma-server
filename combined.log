@@ -3,3 +3,5 @@
 {"level":"error","message":"Error: SequelizeConnectionRefusedError: connect ECONNREFUSED ::1:3306","service":"user-service"}
 {"level":"info","message":"server started on port 5000","service":"user-service"}
 {"level":"info","message":"Database connect ...","service":"user-service"}
+{"level":"info","message":"server started on port 5000","service":"user-service"}
+{"level":"info","message":"Database connect ...","service":"user-service"}
