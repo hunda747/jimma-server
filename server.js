@@ -23,8 +23,8 @@ app.use(cors());
 // app.use(associations);
 
 db.authenticate()
-  .then(() => logger.log("info", "Database connect ..."))
-  .catch((err) => logger.log("error", "Error: " + err));
+  .then(() => logger("info", "Database connect ..."))
+  .catch((err) => logger("error", "Error: " + err));
 
 app.get("/", (req, res) => res.send("indeEX"));
 app.use("/api/food", foodRoutes);
@@ -36,4 +36,4 @@ app.use("/api/admin", adminRoutes);
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, logger.log("info", `server started on port ${PORT}`));
+app.listen(PORT, logger("info", `server started on port ${PORT}`));
